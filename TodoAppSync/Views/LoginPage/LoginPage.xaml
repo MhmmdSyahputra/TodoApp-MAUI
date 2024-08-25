@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TodoAppSync.Views.LoginPage.LoginPage"
+             BackgroundColor="#F5F5F5"
+             Title="LoginPage">
+    <ContentPage.Content>
+        <!-- Ubah Grid menjadi AbsoluteLayout untuk kontrol ukuran yang lebih baik -->
+        <AbsoluteLayout VerticalOptions="FillAndExpand" 
+                        HorizontalOptions="FillAndExpand"
+                        Padding="30">
+
+            <!-- Background Box for styling -->
+            <Frame BackgroundColor="White"
+                   CornerRadius="10"
+                   Padding="30"
+                   HasShadow="True"
+                   BorderColor="White"
+                   AbsoluteLayout.LayoutBounds="0.5, 0.5, 500, 450"                
+                   AbsoluteLayout.LayoutFlags="PositionProportional">
+
+                <!-- StackLayout to organize elements vertically -->
+                <StackLayout Spacing="25">
+
+                    <!-- Title -->
+                    <Label Text="LOGIN TODOS"
+                           FontSize="28"
+                           TextColor="#333"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center" />
+
+                    <Label Text="Username"
+                           FontSize="14"
+                           TextColor="#333"
+                           Margin="4,0,0,-20"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Start" />
+
+                    <!-- Username Entry -->
+                    <Entry x:Name="UsernameEntry"
+                           BackgroundColor="#E8E8E8"
+                           TextColor="#333"
+                           PlaceholderColor="#888"
+                           FontSize="17"
+                           HeightRequest="50"
+                           Margin="0,0,0,0"
+                           VerticalOptions="Center"
+                           HorizontalOptions="FillAndExpand"
+                           Keyboard="Default" />
+
+                    <Label Text="Password"
+                           FontSize="14"
+                           TextColor="#333"
+                           FontAttributes="Bold"
+                           Margin="4,0,0,-20"
+
+                           HorizontalOptions="Start" />
+                    <!-- Password Entry -->
+                    <Entry x:Name="PasswordEntry"
+                           IsPassword="True"
+                           BackgroundColor="#E8E8E8"
+                           FontSize="14"
+                           TextColor="#333"
+                           PlaceholderColor="#888"
+                           HeightRequest="50" />
+
+                    <!-- Login Button -->
+                    <Button Text="Login"
+                            BackgroundColor="#FF6B6B"
+                            TextColor="White"
+                            FontSize="18"
+                            CornerRadius="5"
+                            HeightRequest="50"
+                            VerticalOptions="End" 
+                            Clicked="OnLoginButtonClick"
+                            />
+
+                    <!-- Forgot Password Link -->
+                    <Label Text="Forgot Password?"
+                           FontSize="14"
+                           TextColor="#FF6B6B"
+                           HorizontalOptions="Center"
+                           VerticalOptions="End"
+                           Padding="10"
+                           />
+
+                </StackLayout>
+            </Frame>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
